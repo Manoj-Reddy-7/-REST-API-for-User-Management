@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the users</title>
+    <link rel="stylesheet" href="users.css">
+  
+</head>
+<body>
+    <h2>you can join out community by </h2>
+<div>
+   <div> 
+              <form method="get" action="/users/new">
+                  <button>join </button>
+                      </form>
+    </div>
+
+    <div> 
+              <form method="get" action="/">
+                  <button>Home</button>
+                 </form>
+    </div>
+
+
+ </div>
+
+    <table>
+        <thead>
+        <tr>
+            <thead>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>EMail</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0;i<allUsers.length; i++){ %>
+   <tr>
+        <td><%=allUsers[i]["id"]%></td>
+        <td><%=allUsers[i]["name"]%></td>
+        <td><%=allUsers[i]["email"]%></td>
+        <td>
+        
+            <form method="get" action="/users/<%= allUsers[i].id %>/edit">
+                
+                <button>edit</button>
+            </form>
+        </td>
+         <td>
+            <form method="get" action="/users/<%= allUsers[i].id%>/delete">
+                <button>Delete</button>
+            </form>
+         </td>
+    </tr>
+<%}%>
+        </tbody>
+
+    </table>
+</body>
+</html>
+

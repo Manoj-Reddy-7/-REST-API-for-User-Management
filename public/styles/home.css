@@ -1,0 +1,11 @@
+h2{
+    text-align: center;
+    box-shadow: 4px 4px 10px green;
+    text-decoration: solid underline;
+}
+button{
+    margin:auto;
+    margin-top:50px;
+    margin-left:400px;
+    
+}

@@ -1,0 +1,7 @@
+tr,td,table{
+    border: 2px solid black;
+}
+
+table{
+    margin:auto 200px;
+}
